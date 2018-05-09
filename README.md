@@ -26,6 +26,14 @@ make
 sudo make install
 sudo ldconfig
 ```
+
+### Docker
+You can also build using Docker.
+```
+docker build --tag="iridium-extractor:latest"
+docker run -it --rm -v /dev/bus/usb:/dev/bus/usb --device /dev/hackrf-one iridium-extractor:latest -D 4 examples/hackrf.conf
+```
+
 ## Sample Usage
 The following commands are examples how to use the `iridium-extractor` tool. To further parse the demodulated frames have a look at the [iridium-toolkit](https://github.com/muccc/iridium-toolkit). It provides scripts to extract meaningful information.
 
