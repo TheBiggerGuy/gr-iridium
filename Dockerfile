@@ -1,8 +1,8 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-      gnuradio gnuradio-dev gr-osmosdr libvolk1.3 libvolk1-dev \
+      gnuradio gnuradio-dev gr-osmosdr libvolk1.4 libvolk1-dev \
       cmake build-essential \
       python python-dev python-scipy swig \
       libboost-dev libcppunit-dev
